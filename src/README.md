@@ -48,3 +48,14 @@ The application uses a simple data model with meaningful identifiers:
    - Grade level
 
 All data is stored in memory, which means data will be reset when the server restarts.
+
+## Optional: Use a persistent database
+
+This project can use SQLite via SQLAlchemy. To initialize the database and seed sample activities:
+
+```
+pip install -r ../requirements.txt
+python ../scripts/init_db.py
+```
+
+By default the DB file `mergington.db` will be created in the project root. You can set `DATABASE_URL` to change this.
